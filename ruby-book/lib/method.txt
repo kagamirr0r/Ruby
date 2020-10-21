@@ -1,0 +1,25 @@
+each ブロック内で配列やハッシュに対して繰り返し処理する ~> array.rb
+each_with_index 二つ目の引数にindexが入り、処理の中でindexを使える ~> array.rb
+map 繰り返し処理した後新しく配列を作る ~> array.rb
+with_index(n) 二つ目の引数にindexが入り、処理の中でindexを使える nはインデックスの開始番号を入れる（省略可） ~> array.rb
+size lengthと同じ。文字数や配列の要素数を取得する "abcdef".size => 6
+even? 偶数かbooleanで返す
+odd? 奇数かbooleanで返す
+push 配列の最後に挿入する << と同じ
+select 配列の各要素にブロックで評価して真の要素を配列にして返す ~> array.rb
+times 配列を使わずに処理を繰り返すだけ
+  sum = 0
+  5.times{ |n| sum += n }
+  sum => 10
+
+  5.times{ sum += 1 }
+  sum => 10
+upto nからmまで数値を増やしながら処理をする ~> array.rb　##繰り返し系
+round(2) 四捨五入
+equal? object_idが等しい時 true
+== 人の目であってりゃtrue 1 = 1.0 => true
+a<=>b  a-b みたいな感じ a>1 だと正の整数　a<bだと負の整数 a=bだと0 比較できないとnil
+
+
+
+
