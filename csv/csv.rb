@@ -17,9 +17,9 @@ require "csv"
 #     p "[#{fg[0]}] [#{fg[1]}] [#{fg[2]}]"
 # end
 
-CSV.foreach("data.csv",headers: true) do |row|
-  p row.to_h.slice("place","minTemp")
-end
+# CSV.foreach("data.csv",headers: true) do |row|
+#   p row.to_h.slice("place","minTemp")
+# end
 
 
 # # 更新を許可するカラムを定義
@@ -27,3 +27,12 @@ end
 #     ["id", "name", "age"]
 # end
 
+
+CSV.open("sample.csv","w") do |csv|
+  attributes = ["email","name","task"]
+  csv << attributes
+
+  @users.each do |user|
+    csv << attributes.map{ |attribute| user[attribute]}
+  end
+end
